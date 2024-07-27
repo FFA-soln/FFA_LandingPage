@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFA Solutions</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #73c323;
+            /* background-image: url();  */ 
+        }
+
+
+        .navbar {
+            padding: 0;
+            letter-spacing: 0.5px;
+            font-family: "hcltech_roobertregular", Arial;
+            background: transparent linear-gradient(90deg, #5f1ebe 0%, #2874f0 67%, #0f5fdc 100%) 0% 0% no-repeat;
+            min-height: auto;
+            margin-bottom: auto;
+            border: 0;
+            border-radius: 0;
+        }
+        .navbar-light .navbar-brand {
+            color: white !important;
+            padding: 10px;
+        }
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .footer {
+            letter-spacing: 0.5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: transparent linear-gradient(90deg, #5f1ebe 0%, #2874f0 67%, #0f5fdc 100%) 0% 0% no-repeat;
+            font-size: 12px;
+            color: #fff;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+            bottom: 0;
+            height: 60px; 
+            padding-top: 20px;
+        }
+        
+        .footer .left, .footer .center, .footer .right {
+            flex: 1;
+        }
+        .footer .center {
+            text-align: center;
+        }
+        .footer .right {
+            text-align: right;
+        }
+        .footer .mx-2 {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
+        a {
+            color: white;
+        }
+        .login-container img {
+            max-width: 25%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .img-logo {
+            vertical-align: middle;
+            border-style: none;
+            height: auto;
+            width: 50px;
+            border-radius: 34%;
+        }
+        .modal-body p {
+            margin-bottom: 10px;
+        }
+        .modal-body a {
+            color: #000;
+            text-decoration: none;
+        }
+        .modal-body a:hover {
+            color: blue; 
+        }
+        .whatsapp-icon {
+            fill: #25D366;
+            width: 25px;
+            height: 25px;
+            margin-right: 5px;
+        }
+        .services-section {
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+        }
+        .service-item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 10px;
+        }
+        .content-video-container {
+    display: flex;
+    justify-content: center; 
+    padding: 20px;
+    align-items: center; 
+    text-align: center; 
+}
+
+.content {
+    flex: 1; 
+    padding: 0 10px; 
+    max-width: 600px; 
+    text-align: left; 
+}
+
+.video {
+    flex: 1; 
+    padding: 0 10px; /
+    max-width: 800px; 
+    width: 100%; 
+}
+
+.video-thumbnail {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.video-popup {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+.video-popup iframe {
+    width: 100%; 
+    height: 100%; 
+}
+
+@media (max-width: 768px) {
+    .content-video-container {
+        flex-direction: column; 
+        text-align: center; 
+    }
+    .content, .video {
+        flex: none; 
+        max-width: 100%; 
+        padding: 10px 0; 
+    }
+
+    .text-center {
+        display: inline;
+    }
+    .logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.welcome-text {
+    max-width: 600px;
+}
+
+.welcome-text h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    flex: 1; /* This makes the boxes take equal space */
+            padding: 10px;
+            border: 1px solid #000;
+            margin: 5px;
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><b>FFA Solutions</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <!-- <header class="text-center my-5">
+        <div class="logo">
+            <img src="WhatsApp Image 2024-07-21 at 8.51.31 PM-modified.png" style="height:180px;" alt="FFA">
+            <h1>Welcome to FFA Solutions</h1>
+        <p>Your one-stop solution for website landing pages, video editing, social media handling, and branding.</p>
+        </div>
+    </header> -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="box"><img src="WhatsApp Image 2024-07-21 at 8.51.31 PM-modified.png" style="height: 120px;" alt="FFA"></div>
+            </div>
+            <div class="col-md-7">
+                <div class="box"><h1>Welcome to FFA Solutions</h1>
+                    <p>Your one-stop solution for website landing pages, video editing, social media handling, and branding.</p></div>
+            </div>
+        </div>
+    </div>
+    <section id="services" class="container text-center my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="th (4).jpeg" class="service-icon" alt="Landing Websites">
+                <h3>Landing Websites</h3>
+                <p>We create stunning landing pages that convert visitors into customers.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="th (1).jpeg" class="service-icon" alt="Video Editing">
+                <h3>Video Editing</h3>
+                <p>Professional video editing services to bring your vision to life.</p>
+            </div>
+            <div class="col-md-4">
+                <img src="th.jpeg" class="service-icon" alt="Social Media Handling">
+                <h3>Social Media Handling</h3>
+                <p>Effective social media strategies to grow your online presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-video-container">
+        <div class="content">
+            <h2>Our Services</h2>
+            <ol>
+                <li><b>Websites Design </b></li>
+                <li><b>Power Bi Reports</b></li>
+                <li><b>Backend Development</b></li>
+                <li><b>Video Editing & Social Media Maintenance</b></li>
+            </ol>
+        </div>
+        <div class="video">
+            <div class="video-thumbnail">
+                <iframe src="FFA__Full HD 1080p_MEDIUM_FR30.mp4" frameborder="0" allowfullscreen></iframe>
+                <div class="video-popup">
+                    <iframe src="FFA__Full HD 1080p_MEDIUM_FR30.mp4" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Modal Structure for Contact-->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <u><h4 style="text-align:center;">FFA Solutions</h4></u>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" class="whatsapp-icon" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg> : 
+                        <a href="https://wa.me/916301721661" target="_blank">
+                            
+                            6301721661
+                        </a>,
+                        <a href="https://wa.me/917207252202" target="_blank">
+                            
+                            7207252202
+                        </a>
+                    </p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#007bff" class="bi bi-linkedin" viewBox="0 0 16 16">
+                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                      </svg> : <a href="https://www.linkedin.com/in/ffa-solutions-57ab91317/" target="_blank"> FFA's LinkedIn</a></p>
+                    <p><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="#ff0000" class="bi bi-envelope" viewBox="0 0 16 16">
+                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+                      </svg> : <a href="mailto:your.email@example.com">ffasolutions28@gmail.com</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<footer class="footer">
+    <div class="left">
+        <p class="mt-3">© 2024 FFA Solutions. All rights reserved.</p>
+    </div>
+    <div class="center">
+        <p class="mx-2 d-inline">Follow us on:</p>
+        <a href="#" class="mx-2">Instagram</a>
+        <a href="#" class="mx-2">Facebook</a>
+        <a href="#" class="mx-2">X</a>
+    </div>
+    <div class="right">
+        <img src="WhatsApp Image 2024-07-21 at 11.07.48 AM-modified.png" class="img-logo" alt="Landing Websites">
+    </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.video-thumbnail').hover(
+            function() {
+                $(this).find('.video-popup').show();
+            }, function() {
+                $(this).find('.video-popup').hide();
+            }
+        );
+    });
+
+    $('#contactModal').on('shown.bs.modal', function () {
+        $('#contactModalLabel').trigger('focus')
+    })
+</script>
+</html>
